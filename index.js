@@ -1,32 +1,62 @@
-// Base16 Tomorrow Dark Theme
+const backgroundColor = '#1d1f21'
+const foregroundColor = '#c5c8c6'
+const cursorColor = foregroundColor
+const borderColor = backgroundColor
 
-exports.middleware = (store) => (next) => (action) => {
-  switch (action.type) {
-    case 'CONFIG_LOAD':
-    case 'CONFIG_RELOAD':
-      action.config.foregroundColor = '#c5c8c6';
-      action.config.backgroundColor = '#363a40';
-      action.config.cursorColor = '#cc6666';
-      action.config.colors = [
-        "#1d1f21",
-        "#cc6666",
-        "#b5bd68",
-        "#f0c674",
-        "#81a2be",
-        "#b57880",
-        "#8abeb7",
-        "#282a2e",
-        "#969896",
-        "#cc6666",
-        "#b5bd68",
-        "#f0c674",
-        "#81a2be",
-        "#b57880",
-        "#8abeb7",
-        "#ffffff",
-        "#c5c8c6"
-      ];
-      action.config.css = '.title_1i8co95 { color: #c5c8c6 !important }'
-  }
-  next(action)
+const colors = [
+  backgroundColor,
+  '#cc6666', // red
+  '#b5b84d', // green
+  '#de935f', // yellow
+  '#81a2be', // blue
+  '#b294bb', // pink
+  '#81a2be', // cyan
+  '#d0d0d0', // light gray
+  '#808080', // medium gray
+  '#cc6666', // red
+  '#b5b84d', // green
+  '#d19a66', // yellow
+  '#81a2be', // blue
+  '#b294bb', // pink
+  '#81a2be', // cyan
+  '#ffffff', // white
+  foregroundColor
+]
+
+exports.decorateConfig = config => {
+  console.log('Style Loaded!')
+
+  return Object.assign({}, config, {
+    foregroundColor,
+    backgroundColor,
+    borderColor,
+    cursorColor,
+    colors,
+    termCSS: `
+      ${config.termCSS || ''}
+      .cursor-node {
+        mix-blend-mode: difference;
+      }
+    `,
+    css: `
+      ${config.css || ''}
+      .header_header {
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+      .tabs_list {
+        background-color: #161719 !important;
+        border-bottom-color: rgba(0,0,0,.15) !important;
+      }
+      .tab_tab.tab_active {
+        font-weight: 500;
+        background-color: ${backgroundColor};
+        border-color: rgba(0,0,0,.27) !important;
+      }
+      .tab_tab.tab_active::before {
+        border-bottom-color: ${backgroundColor};
+      }
+    `
+  })
 }
