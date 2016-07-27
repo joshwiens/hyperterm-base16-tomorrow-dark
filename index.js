@@ -11,8 +11,8 @@ const colors = [
   '#81a2be', // blue
   '#b294bb', // pink
   '#81a2be', // cyan
-  '#d0d0d0', // light gray
-  '#808080', // medium gray
+  '#d5d9dc', // light gray
+  '#909898', // medium gray
   '#cc6666', // red
   '#b5b84d', // green
   '#d19a66', // yellow
