@@ -1,6 +1,6 @@
 {
   "name": "hyperterm-base16-tomorrow-dark",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hypertheme based on Base16 Tomorrow Dark Theme",
   "main": "index.js",
   "scripts": {
