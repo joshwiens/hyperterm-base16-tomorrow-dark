@@ -11,7 +11,7 @@ Terminal
 
 VIM
 ----------
-![hyperterm-base16-tomorrow-dark Vim](https://raw.githubusercontent.com/d3viant0ne/hyperterm-base16-tomorrow-dark/master/assets/colors2.png)
+![hyperterm-base16-tomorrow-dark Vim](https://raw.githubusercontent.com/d3viant0ne/hyperterm-base16-tomorrow-dark/master/assets/color2.png)
 
 
 
