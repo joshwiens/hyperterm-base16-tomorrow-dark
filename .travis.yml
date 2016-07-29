@@ -1,0 +1,20 @@
+sudo: false
+language: node_js
+os:
+  - linux
+  - osx
+node_js:
+  - node
+  - "6"
+  - "5"
+  - "4"
+script: npm run test
+env:
+  - NO_WATCH_TESTS=1
+
+install:
+  - npm install
+
+after_success:
+  - cat ./coverage/coverage.json | node_modules/codecov.io/bin/codecov.io.js
+  - rm -rf ./coverage
