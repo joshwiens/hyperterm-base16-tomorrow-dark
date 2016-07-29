@@ -4,14 +4,15 @@ Hyperterm Theme based on Atom's `base16-tomorrow-dark-theme` theme
 ### Install
 
 1. Open HyperTerm's preferences with `Cmd+,` (or manually at `~/.hyperterm.js`) with your editor.
-2. Update your list of plugins to include `hyperterm-base16-tomorrow-dark`, like so:
+  a. At time of writing there is a perms issue with `Cmd+` open it manually.
+2. Update your list of plugins to include `hyperterm-base16-tomorrow-dark`, i.e. :
   
   ```js
 plugins: [
   'hyperterm-base16-tomorrow-dark'
 ],
 ```
-3. Fully reload HyperTerm (`Cmd+Shift+R`), and tada!
+3. Fully reload HyperTerm (`Cmd+Shift+R`), and it's hyperterm secsi time :)
 
 Terminal
 ----------
